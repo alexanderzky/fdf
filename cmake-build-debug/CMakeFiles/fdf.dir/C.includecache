@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/./libft/libft.h
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+stdarg.h
+-
+
+/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.c
+fdf.h
+/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.h
+
+/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.h
+./libft/libft.h
+/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/./libft/libft.h
+fcntl.h
+-
+
