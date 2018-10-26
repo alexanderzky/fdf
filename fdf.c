@@ -6,7 +6,7 @@
 /*   By: ozalisky <ozalisky@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 21:31:56 by ozalisky          #+#    #+#             */
-/*   Updated: 2018/10/25 20:06:39 by ozalisky         ###   ########.fr       */
+/*   Updated: 2018/10/26 19:40:25 by ozalisky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_init(t_db *db)
 	db->line = NULL;
 	db->x_counter = 0;
 	db->y_counter = 0;
+	db->x_4cpmr = 0;
 	db->point = NULL;
 }
 
@@ -50,7 +51,7 @@ void	ft_save_map(t_db *db)
 		else if (ft_isdigit(db->line[i]))
 		{
 			temp_point = db->point;
-			while (temp_point != NULL)
+			while (temp_point != NULL) //add last one point
 			{
 				prev_point = temp_point;
 				temp_point = temp_point->next;
@@ -64,7 +65,15 @@ void	ft_save_map(t_db *db)
 			else if (prev_point)
 				prev_point->next = temp_point;
 		}
-		++i;
+		i += ft_nbr_lngth(temp_point->z) ? ft_nbr_lngth(temp_point->z) : 1;
+	}
+	if (db->x_4cpmr == 0)
+	{
+		db->x_4cpmr = db->x_counter;
+	}
+	else if (db->x_4cpmr != db->x_counter)
+	{
+		ft_error("wrong quantity of xs");
 	}
 	db->x_counter = 0;
 	++db->y_counter;
@@ -72,7 +81,7 @@ void	ft_save_map(t_db *db)
 
 int		main(int argc, char **argv)
 {
-	t_db db;
+	t_db db; // check if only 1 point
 
 	ft_init(&db);
 	if (argc < 2)
@@ -84,5 +93,16 @@ int		main(int argc, char **argv)
 		//check for null
 		ft_save_map(&db);
 	}
+	int y = 0;
+	int x = 0;
+	while (y < db.y_counter){
+		while (x < db.x_4cpmr){
+			ft_printf("%l",db.point->z);
+			++x;
+		}
+		x = 0;
+		y ++;
+	}
+
 	return 0;
 }
