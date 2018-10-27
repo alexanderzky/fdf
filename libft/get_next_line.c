@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozalisky <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ozalisky <ozalisky@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/16 15:06:25 by ozalisky          #+#    #+#             */
-/*   Updated: 2018/10/17 19:19:40 by ozalisky         ###   ########.fr       */
+/*   Updated: 2018/10/27 19:27:13 by ozalisky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ t_gnl	*ft_check_fd(int fd, t_gnl **slist)
 			return (temp);
 		temp = temp->next;
 	}
-	if (!(newlist = malloc(sizeof(struct s_gnl))))
-		return (NULL);
+	newlist = ft_memalloc(sizeof(struct s_gnl));
 	newlist->fd = fd;
 	newlist->file_size = 0;
 	newlist->buffer = NULL;

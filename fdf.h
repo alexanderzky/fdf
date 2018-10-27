@@ -6,7 +6,7 @@
 /*   By: ozalisky <ozalisky@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 21:33:07 by ozalisky          #+#    #+#             */
-/*   Updated: 2018/10/26 18:24:11 by ozalisky         ###   ########.fr       */
+/*   Updated: 2018/10/27 16:56:30 by ozalisky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@
 
 typedef struct		s_point
 {
-	long				x;
-	long				y;
-	long				z;
+	double				x;
+	double				y;
+	double				z;
 	long				color;
-	struct s_point *next;
+	double				x_copy;
+	double				y_copy;
+	double				z_copy;
 }					t_p;
 
 typedef struct		s_db
@@ -32,7 +34,9 @@ typedef struct		s_db
 	size_t			x_counter;
 	size_t			x_4cpmr;
 	size_t			y_counter;
+	struct s_point **arr;
 	struct s_point	*point;
+
 }					t_db;
 
 
