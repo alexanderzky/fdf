@@ -6,7 +6,7 @@
 /*   By: ozalisky <ozalisky@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 21:33:07 by ozalisky          #+#    #+#             */
-/*   Updated: 2018/10/27 16:56:30 by ozalisky         ###   ########.fr       */
+/*   Updated: 2018/10/28 20:03:44 by ozalisky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 #include "./libft/libft.h"
 # include <fcntl.h>
+# include <mlx.h>
+# include <math.h>
+# define PI = 3.14159265359
 
 typedef struct		s_point
 {
@@ -36,7 +39,17 @@ typedef struct		s_db
 	size_t			y_counter;
 	struct s_point **arr;
 	struct s_point	*point;
-
+	int 			scale;
+	double			alp;
+	double			bet;
+	double 			gam;
+	int 			color;
+	int 			an_z;
+	int 			an_y;
+	int 			an_x;
+	int 			increment;
+	void			*mlx_ptr;
+	void			*win_ptr;
 }					t_db;
 
 

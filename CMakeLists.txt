@@ -3,6 +3,8 @@ project(fdf C)
 
 set(CMAKE_C_STANDARD 99)
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lmlx -framework OpenGL -framework AppKit")
+
 add_executable(fdf
         libft/ft_adders.c
         libft/ft_additional.c
