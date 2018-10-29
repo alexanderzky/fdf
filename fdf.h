@@ -50,6 +50,8 @@ typedef struct		s_db
 	int 			increment;
 	void			*mlx_ptr;
 	void			*win_ptr;
+	int 			size_x;
+	int 			size_y;
 }					t_db;
 
 

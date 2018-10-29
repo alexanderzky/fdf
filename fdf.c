@@ -6,7 +6,7 @@
 /*   By: ozalisky <ozalisky@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 21:31:56 by ozalisky          #+#    #+#             */
-/*   Updated: 2018/10/28 20:30:41 by ozalisky         ###   ########.fr       */
+/*   Updated: 2018/10/29 21:32:41 by ozalisky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,15 @@ void	ft_init(t_db *db)
 	db->x_4cpmr = 0;
 	db->point = NULL;
 	db->scale = 10;
-	db->an_z = 15;
-	db->an_x = 30;
-	db->an_y = 35;
+	db->an_z = 1;
+	db->an_x = 1;
+	db->an_y = 1;
 	db->increment = 5;
+	db->size_x = 500;
+	db->size_y = 500;
 	db->mlx_ptr = mlx_init();
-	db->win_ptr = mlx_new_window(db->mlx_ptr, 500,500, "mlx 42");
+	db->win_ptr = mlx_new_window(db->mlx_ptr, db->size_x, db->size_y, "mlx 42");
+	db->color = 0xffffff;
 }
 
 void	ft_error(char *str)
@@ -166,7 +169,6 @@ void	ft_save_map(t_db *db, char *file)
 		i = 0;
 		++y;
 
-
 		free(db->line);
 	}
 
@@ -179,7 +181,8 @@ void		calc_mod1(t_db *db, int i, int z)
 			cos(db->gam) + cos(db->alp) * cos(db->bet) * sin(db->gam)) +
 					(db->arr[i][z]).y_copy * (cos(db->alp) * cos(db->bet) *
 					cos(db->gam) - sin(db->alp) * sin(db->gam)) -
-					(db->arr[i][z]).z * cos(db->alp) * sin(db->bet));
+					(db->arr[i][z]).z * cos(db->alp) * sin(db->bet)) + (db->size_y)/20 -
+						((int) db->y_counter / 2);
 }
 
 void		calc_mod2(t_db *db, int i, int z)
@@ -192,72 +195,121 @@ void		calc_mod2(t_db *db, int i, int z)
 
 void		rotation(t_db *db)
 {
-	int		i;
-	int		z;
+	int		y;
+	int		x;
 
-	i = -1;
+	y = -1;
 	db->alp = 3.14159265359 * (db->an_z) / 180;
 	db->bet = 3.14159265359 * (db->an_y) / 180;
 	db->gam = 3.14159265359 * (db->an_x) / 180;
-	while (++i < db->y_counter)
+	while (++y < db->y_counter)
 	{
-		z = -1;
-		while (++z < db->x_counter)
+		x = -1;
+		while (++x < db->x_counter)
 		{
 //			db->arr[i][z].z = 20;
-			db->arr[i][z].z = ((db->arr[i][z]).z_copy);
-db->arr[i][z].x = (db->arr[i][z].x_copy * (cos(db->alp) * cos(db->gam) - sin(db->alp) * cos(db->bet) * sin(db->gam)) + (db->arr[i][z]).y_copy * (-cos(db->alp) * sin(db->gam) - sin(db->alp) * cos(db->bet) * cos(db->gam)) + (db->arr[i][z]).y * sin(db->alp) * sin(db->bet));
-			calc_mod1(db, i, z);
-			calc_mod2(db, i, z);
+			db->arr[y][x].z = ((db->arr[y][x]).z_copy);
+db->arr[y][x].x = (db->arr[y][x].x_copy * (cos(db->alp) * cos(db->gam) - sin(db->alp) *
+		cos(db->bet) * sin(db->gam)) + (db->arr[y][x]).y_copy * (-cos(db->alp) *
+				sin(db->gam) - sin(db->alp) * cos(db->bet) * cos(db->gam)) +
+						(db->arr[y][x]).y * sin(db->alp) * sin(db->bet)) +
+				  (db->size_x ) / 20 - ((int)db->x_counter/2);
+			calc_mod1(db, y, x);
+//			calc_mod2(db, y, x);
 		}
 	}
 }
 
 void line (t_db *db, int x0, int x1, int y0, int y1, int color)
 {
-	int dx = db->arr[y0][x1 + 1].x - db->arr[y0][x0].x;
-	int dy = db->arr[y1 + 1][x0].y - db->arr[y0][x0].y;
-	int d = (dy << 1) - dx;
-	int d1 = dy << 1;
-	int d2 = (dy - dx) << 1;
 
-	mlx_pixel_put(db->mlx_ptr, db->win_ptr, db->arr[y0][x0].x * db->scale,
-				  db->arr[y0][x0].y * db->scale, db->color);
+	int dx =  abs (x1 - x0), sx = x0 < x1 ? 1 : -1;
+	int dy = -abs (y1 - y0), sy = y0 < y1 ? 1 : -1;
+	int err = dx + dy, e2; /* error value e_xy */
 
-	int x_new = db->arr[y0][x0].x + 1;
-	int y_new = db->arr[y0][x0].y;
-	while (x_new <= db->arr[y0][x1 + 1].x)
-	{
-		if ( d > 0)
-		{
-			d += d2;
-			y_new += 1;
-		}
-		else
-			d += d1;
-
-		mlx_pixel_put(db->mlx_ptr, db->win_ptr, db->arr[y_new][x_new].x * db->scale,
-					  db->arr[y_new][x_new].y * db->scale, db->color);
-
-		x_new++;
+	for (;;){  /* loop */
+		mlx_pixel_put (db->mlx_ptr, db->win_ptr,x0*db->scale,y0*db->scale,0xffffff);
+		if (x0 == x1 && y0 == y1) break;
+		e2 = 2 * err;
+		if (e2 >= dy) { err += dy; x0 += sx; } /* e_xy+e_x > 0 */
+		if (e2 <= dx) { err += dx; y0 += sy; } /* e_xy+e_y < 0 */
 	}
+
+
+
+
+//	int dx, dy, p, x, y;
+//
+//	dx=db->arr[y0][x1].x - db->arr[y0][x0].x;
+//	dy=db->arr[y1][x0].y - db->arr[y0][x0].y;
+//
+//	x=db->arr[y0][x0].x;
+//	y=db->arr[y0][x0].y;
+//
+//	p=2*dy-dx;
+//
+//	while(x<db->arr[y0][x1].x)
+//	{
+//		if(p>=0)
+//		{
+////			db->color = (db->arr[y][x].z > 0) ? 0x0000ff : 0xffffff;
+//			mlx_pixel_put(db->mlx_ptr, db->win_ptr,x * 10,y*10,db->color);
+//			y=y+1;
+//			p=p+2*dy-2*dx;
+//		}
+//		else
+//		{
+//			mlx_pixel_put(db->mlx_ptr, db->win_ptr,x*10,y*10,0xffffff);
+//			p=p+2*dy;
+//		}
+//		x=x+1;
+//	}
+
+
+
+//	int dx = db->arr[y0][x1 + 1].x - db->arr[y0][x0].x;
+//	int dy = db->arr[y1 + 1][x0].y - db->arr[y0][x0].y;
+//	int d = (dy << 1) - dx;
+//	int d1 = dy << 1;
+//	int d2 = (dy - dx) << 1;
+//
+//	mlx_pixel_put(db->mlx_ptr, db->win_ptr, db->arr[y0][x0].x * db->scale,
+//				  db->arr[y0][x0].y * db->scale, db->color);
+//
+//	int x_new = db->arr[y0][x0].x + 1;
+//	int y_new = db->arr[y0][x0].y;
+//	while (x_new <= db->arr[y0][x1 + 1].x)
+//	{
+//		if ( d > 0)
+//		{
+//			d += d2;
+//			y_new += 1;
+//		}
+//		else
+//			d += d1;
+//
+//		mlx_pixel_put(db->mlx_ptr, db->win_ptr, db->arr[y_new][x_new].x * db->scale,
+//					  db->arr[y_new][x_new].y * db->scale, db->color);
+//
+//		x_new++;
+//	}
 }
 
 
 
 void	key_hook_rot(t_db *db, int keycode)
 {
-	if (keycode == 2)
+	if (keycode == 126)
 		db->an_x += db->increment;
-	else if (keycode == 0)
+	else if (keycode == 125)
 		db->an_x -= db->increment;
-	else if (keycode == 13)
+	else if (keycode == 123)
 		db->an_y += db->increment;
-	else if (keycode == 1)
+	else if (keycode == 124)
 		db->an_y -= db->increment;
-	else if (keycode == 12)
+	else if (keycode == 82)
 		db->an_z += db->increment;
-	else if (keycode == 14)
+	else if (keycode == 65)
 		db->an_z -= db->increment;
 //	db->alp = 3.14159265359 * (db->an_z) / 180;
 //	db->bet = 3.14159265359 * (db->an_y) / 180;
@@ -272,11 +324,11 @@ int 	key_hook(int keycode, t_db *db)
 		mlx_destroy_window(db->mlx_ptr, db->win_ptr);
 		exit(0);
 	}
-	else if (keycode > 0 && keycode < 80 )
-	{
-		key_hook_rot(db, keycode);
-	}
-	mlx_clear_window(db->mlx_ptr, db->win_ptr);
+//	else if (keycode > 122 && keycode < 126 )
+//	{
+//		key_hook_rot(db, keycode);
+//	}
+//	mlx_clear_window(db->mlx_ptr, db->win_ptr);
 }
 
 int		main(int argc, char **argv)
@@ -320,14 +372,14 @@ int		main(int argc, char **argv)
 //	}
 	y = 0;
 	x = 0;
-	while (y < db.y_counter - 1)
+	while (y < db.y_counter && y + 1 < db.y_counter)
 	{
-		while (x < db.x_counter - 1)
+		while (x < db.x_counter && x + 1 < db.x_counter && (y < db.y_counter && y + 1 < db.y_counter))
 		{
 			db.color = (db.arr[y][x].z > 0) ? 0x0000ff : 0xffffff;
 //			mlx_pixel_put(db.mlx_ptr, db.win_ptr, db.arr[y][x].x * db.scale,
 //					db.arr[y][x].y * db.scale, db.color);
-			line(&db, x, x + 1, y, y + 1, db.color );
+			line(&db, db.arr[y][x].x, db.arr[y][x + 1].x, db.arr[y][x].y, db.arr[y + 1][x].y, db.color );
 			++x;
 		}
 		x = 0 ;
