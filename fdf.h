@@ -6,7 +6,7 @@
 /*   By: ozalisky <ozalisky@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 21:33:07 by ozalisky          #+#    #+#             */
-/*   Updated: 2018/10/28 20:03:44 by ozalisky         ###   ########.fr       */
+/*   Updated: 2018/10/30 17:56:58 by ozalisky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <fcntl.h>
 # include <mlx.h>
 # include <math.h>
-# define PI = 3.14159265359
 
 typedef struct		s_point
 {
@@ -40,6 +39,8 @@ typedef struct		s_db
 	struct s_point **arr;
 	struct s_point	*point;
 	int 			scale;
+//	double 			x_scale;
+//	double 			y_scale;
 	double			alp;
 	double			bet;
 	double 			gam;
