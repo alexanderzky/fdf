@@ -6,7 +6,7 @@
 /*   By: ozalisky <ozalisky@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 21:31:56 by ozalisky          #+#    #+#             */
-/*   Updated: 2018/10/30 21:01:09 by ozalisky         ###   ########.fr       */
+/*   Updated: 2018/10/30 21:05:11 by ozalisky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,7 +139,8 @@ void		calc_mod1(t_db *db, int i, int z)
 			cos(db->gam) + cos(db->alp) * cos(db->bet) * sin(db->gam)) +
 					(db->arr[i][z]).y_copy * (cos(db->alp) * cos(db->bet) *
 					cos(db->gam) - sin(db->alp) * sin(db->gam)) -
-					(db->arr[i][z]).z * cos(db->alp) * sin(db->bet))  ;
+					(db->arr[i][z]).z * cos(db->alp) * sin(db->bet))+ (db->size_y)/20 -
+						((int) db->y_counter / 2)  ;
 }
 
 void		calc_mod2(t_db *db, int i, int z)
@@ -168,7 +169,8 @@ void		rotation(t_db *db)
 		db->arr[y][x].x = (db->arr[y][x].x_copy * (cos(db->alp) * cos(db->gam) - sin(db->alp) *
 		cos(db->bet) * sin(db->gam)) + (db->arr[y][x]).y_copy * (-cos(db->alp) *
 				sin(db->gam) - sin(db->alp) * cos(db->bet) * cos(db->gam)) +
-						(db->arr[y][x]).y * sin(db->alp) * sin(db->bet));
+						(db->arr[y][x]).y * sin(db->alp) * sin(db->bet)) +
+						  (db->size_x ) / 20 - ((int)db->x_counter/2);
 			calc_mod1(db, y, x);
 			calc_mod2(db, y, x);
 		}
