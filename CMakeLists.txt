@@ -107,4 +107,4 @@ add_executable(fdf
         libft/ft_xformat.c
         libft/get_next_line.c
         libft/libft.h
-        fdf.c fdf.h)
+        fdf.c fdf.h init_mlx.c map_fdf.c fdf_line.c)

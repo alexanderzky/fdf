@@ -5,6 +5,14 @@ CMakeFiles/fdf.dir/fdf.c.o
  /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/./libft/libft.h
  /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.c
  /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.h
+CMakeFiles/fdf.dir/fdf_line.c.o
+ /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/./libft/libft.h
+ /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.h
+ /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf_line.c
+CMakeFiles/fdf.dir/init_mlx.c.o
+ /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/./libft/libft.h
+ /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.h
+ /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/init_mlx.c
 CMakeFiles/fdf.dir/libft/ft_adders.c.o
  /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/ft_adders.c
  /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/libft.h
@@ -285,3 +293,7 @@ CMakeFiles/fdf.dir/libft/ft_xformat.c.o
 CMakeFiles/fdf.dir/libft/get_next_line.c.o
  /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/./libft.h
  /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/get_next_line.c
+CMakeFiles/fdf.dir/map_fdf.c.o
+ /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/./libft/libft.h
+ /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.h
+ /Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/map_fdf.c

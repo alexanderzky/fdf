@@ -150,6 +150,60 @@ fdf.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/fdf.c.s
 .PHONY : fdf.c.s
 
+fdf_line.o: fdf_line.c.o
+
+.PHONY : fdf_line.o
+
+# target to build an object file
+fdf_line.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/fdf_line.c.o
+.PHONY : fdf_line.c.o
+
+fdf_line.i: fdf_line.c.i
+
+.PHONY : fdf_line.i
+
+# target to preprocess a source file
+fdf_line.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/fdf_line.c.i
+.PHONY : fdf_line.c.i
+
+fdf_line.s: fdf_line.c.s
+
+.PHONY : fdf_line.s
+
+# target to generate assembly for a file
+fdf_line.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/fdf_line.c.s
+.PHONY : fdf_line.c.s
+
+init_mlx.o: init_mlx.c.o
+
+.PHONY : init_mlx.o
+
+# target to build an object file
+init_mlx.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/init_mlx.c.o
+.PHONY : init_mlx.c.o
+
+init_mlx.i: init_mlx.c.i
+
+.PHONY : init_mlx.i
+
+# target to preprocess a source file
+init_mlx.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/init_mlx.c.i
+.PHONY : init_mlx.c.i
+
+init_mlx.s: init_mlx.c.s
+
+.PHONY : init_mlx.s
+
+# target to generate assembly for a file
+init_mlx.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/init_mlx.c.s
+.PHONY : init_mlx.c.s
+
 libft/ft_adders.o: libft/ft_adders.c.o
 
 .PHONY : libft/ft_adders.o
@@ -2850,6 +2904,33 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
+map_fdf.o: map_fdf.c.o
+
+.PHONY : map_fdf.o
+
+# target to build an object file
+map_fdf.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/map_fdf.c.o
+.PHONY : map_fdf.c.o
+
+map_fdf.i: map_fdf.c.i
+
+.PHONY : map_fdf.i
+
+# target to preprocess a source file
+map_fdf.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/map_fdf.c.i
+.PHONY : map_fdf.c.i
+
+map_fdf.s: map_fdf.c.s
+
+.PHONY : map_fdf.s
+
+# target to generate assembly for a file
+map_fdf.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/map_fdf.c.s
+.PHONY : map_fdf.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2862,6 +2943,12 @@ help:
 	@echo "... fdf.o"
 	@echo "... fdf.i"
 	@echo "... fdf.s"
+	@echo "... fdf_line.o"
+	@echo "... fdf_line.i"
+	@echo "... fdf_line.s"
+	@echo "... init_mlx.o"
+	@echo "... init_mlx.i"
+	@echo "... init_mlx.s"
 	@echo "... libft/ft_adders.o"
 	@echo "... libft/ft_adders.i"
 	@echo "... libft/ft_adders.s"
@@ -3162,6 +3249,9 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
+	@echo "... map_fdf.o"
+	@echo "... map_fdf.i"
+	@echo "... map_fdf.s"
 .PHONY : help
 
 

@@ -5,6 +5,14 @@ CMakeFiles/fdf.dir/fdf.c.o: .././libft/libft.h
 CMakeFiles/fdf.dir/fdf.c.o: ../fdf.c
 CMakeFiles/fdf.dir/fdf.c.o: ../fdf.h
 
+CMakeFiles/fdf.dir/fdf_line.c.o: .././libft/libft.h
+CMakeFiles/fdf.dir/fdf_line.c.o: ../fdf.h
+CMakeFiles/fdf.dir/fdf_line.c.o: ../fdf_line.c
+
+CMakeFiles/fdf.dir/init_mlx.c.o: .././libft/libft.h
+CMakeFiles/fdf.dir/init_mlx.c.o: ../fdf.h
+CMakeFiles/fdf.dir/init_mlx.c.o: ../init_mlx.c
+
 CMakeFiles/fdf.dir/libft/ft_adders.c.o: ../libft/ft_adders.c
 CMakeFiles/fdf.dir/libft/ft_adders.c.o: ../libft/libft.h
 
@@ -284,4 +292,8 @@ CMakeFiles/fdf.dir/libft/ft_xformat.c.o: ../libft/libft.h
 
 CMakeFiles/fdf.dir/libft/get_next_line.c.o: ../libft/./libft.h
 CMakeFiles/fdf.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
+
+CMakeFiles/fdf.dir/map_fdf.c.o: .././libft/libft.h
+CMakeFiles/fdf.dir/map_fdf.c.o: ../fdf.h
+CMakeFiles/fdf.dir/map_fdf.c.o: ../map_fdf.c
 

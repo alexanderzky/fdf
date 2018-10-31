@@ -1370,6 +1370,45 @@ CMakeFiles/fdf.dir/fdf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/fdf.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.c" -o CMakeFiles/fdf.dir/fdf.c.s
 
+CMakeFiles/fdf.dir/init_mlx.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/init_mlx.c.o: ../init_mlx.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/fdf.dir/init_mlx.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/init_mlx.c.o   -c "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/init_mlx.c"
+
+CMakeFiles/fdf.dir/init_mlx.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/init_mlx.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/init_mlx.c" > CMakeFiles/fdf.dir/init_mlx.c.i
+
+CMakeFiles/fdf.dir/init_mlx.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/init_mlx.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/init_mlx.c" -o CMakeFiles/fdf.dir/init_mlx.c.s
+
+CMakeFiles/fdf.dir/map_fdf.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/map_fdf.c.o: ../map_fdf.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/fdf.dir/map_fdf.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/map_fdf.c.o   -c "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/map_fdf.c"
+
+CMakeFiles/fdf.dir/map_fdf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/map_fdf.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/map_fdf.c" > CMakeFiles/fdf.dir/map_fdf.c.i
+
+CMakeFiles/fdf.dir/map_fdf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/map_fdf.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/map_fdf.c" -o CMakeFiles/fdf.dir/map_fdf.c.s
+
+CMakeFiles/fdf.dir/fdf_line.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/fdf_line.c.o: ../fdf_line.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/fdf.dir/fdf_line.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/fdf_line.c.o   -c "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf_line.c"
+
+CMakeFiles/fdf.dir/fdf_line.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/fdf_line.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf_line.c" > CMakeFiles/fdf.dir/fdf_line.c.i
+
+CMakeFiles/fdf.dir/fdf_line.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/fdf_line.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf_line.c" -o CMakeFiles/fdf.dir/fdf_line.c.s
+
 # Object files for target fdf
 fdf_OBJECTS = \
 "CMakeFiles/fdf.dir/libft/ft_adders.c.o" \
@@ -1472,7 +1511,10 @@ fdf_OBJECTS = \
 "CMakeFiles/fdf.dir/libft/ft_x_minus.c.o" \
 "CMakeFiles/fdf.dir/libft/ft_xformat.c.o" \
 "CMakeFiles/fdf.dir/libft/get_next_line.c.o" \
-"CMakeFiles/fdf.dir/fdf.c.o"
+"CMakeFiles/fdf.dir/fdf.c.o" \
+"CMakeFiles/fdf.dir/init_mlx.c.o" \
+"CMakeFiles/fdf.dir/map_fdf.c.o" \
+"CMakeFiles/fdf.dir/fdf_line.c.o"
 
 # External object files for target fdf
 fdf_EXTERNAL_OBJECTS =
@@ -1578,9 +1620,12 @@ fdf: CMakeFiles/fdf.dir/libft/ft_x_minus.c.o
 fdf: CMakeFiles/fdf.dir/libft/ft_xformat.c.o
 fdf: CMakeFiles/fdf.dir/libft/get_next_line.c.o
 fdf: CMakeFiles/fdf.dir/fdf.c.o
+fdf: CMakeFiles/fdf.dir/init_mlx.c.o
+fdf: CMakeFiles/fdf.dir/map_fdf.c.o
+fdf: CMakeFiles/fdf.dir/fdf_line.c.o
 fdf: CMakeFiles/fdf.dir/build.make
 fdf: CMakeFiles/fdf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_102) "Linking C executable fdf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_105) "Linking C executable fdf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fdf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

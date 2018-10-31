@@ -100,6 +100,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/fdf.dir/libft/ft_xformat.c.o"
   "CMakeFiles/fdf.dir/libft/get_next_line.c.o"
   "CMakeFiles/fdf.dir/fdf.c.o"
+  "CMakeFiles/fdf.dir/init_mlx.c.o"
+  "CMakeFiles/fdf.dir/map_fdf.c.o"
+  "CMakeFiles/fdf.dir/fdf_line.c.o"
   "fdf.pdb"
   "fdf"
 )

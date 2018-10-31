@@ -6,7 +6,7 @@
 #    By: ozalisky <ozalisky@student.unit.ua>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/15 13:57:40 by ozalisky          #+#    #+#              #
-#    Updated: 2018/10/28 14:21:40 by ozalisky         ###   ########.fr        #
+#    Updated: 2018/10/31 19:17:35 by ozalisky         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,14 @@ NAME = fdf
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -O3 -I /usr/local/include -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit
+CFLAGS = -Wall -Wextra -Werror -O3
+
+MLX = make -C $(MLX_FOLDER)
+
+MLX_FOLDER = ./minilibx/
+
+FRAMES = -framework OpenGL -framework AppKit
+
 
 SRC = libft/ft_atoi.c libft/ft_bzero.c libft/ft_isalnum.c libft/ft_isalpha.c libft/ft_isascii.c \
 		libft/ft_isdigit.c libft/ft_isprint.c libft/ft_itoa.c libft/ft_memalloc.c libft/ft_memccpy.c libft/ft_memchr.c \
@@ -37,26 +44,30 @@ SRC = libft/ft_atoi.c libft/ft_bzero.c libft/ft_isalnum.c libft/ft_isalpha.c lib
 		libft/ft_checkers.c libft/ft_adders.c libft/ft_lists.c libft/ft_pformat.c libft/ft_cformat.c libft/ft_sformat.c libft/ft_oformat.c libft/ft_buffer_add_wrong.c libft/ft_o_additional.c libft/ft_influence_chars.c \
 		libft/ft_wcformat.c libft/ft_u_additional.c libft/ft_p_additional.c libft/ft_additional.c libft/ft_di_minus.c libft/ft_di_additional.c libft/ft_swformat.c libft/ft_ws_minus.c libft/ft_ws_plus.c libft/ft_s_plus.c \
 		libft/ft_length_funcs.c libft/ft_x_additional.c libft/ft_x_minus.c libft/ft_itoa_base_dec.c \
-        libft/get_next_line.c fdf.c\
+		libft/get_next_line.c fdf.c map_fdf.c init_mlx.c fdf_line.c\
 
-
-OFILES = $(SRC:.c=.o)
+OBJ		= $(patsubst src/%.c,obj/%.o,$(SRC))
+.SILENT:
 
 all: $(NAME)
 
-$(NAME): $(OFILES)
-	# ar rc $@ $^
-	gcc -o $(NAME) $(OFILES)
-	# ranlib $@
+$(NAME): $(OBJ)
+	make -C libft/
+	gcc -Wall -Wextra -Werror -L libft/ -lft -g -Lminilibx_macos -lmlx -framework OpenGL -framework AppKit $(SRC) -o $(NAME)
+
+obj/%.o: src/%.c
+	mkdir -p obj
+	gcc -Wall -Wextra -Werror -c $< -o $@
 
 clean:
-	rm -f $(OFILES)
-	rm -f *~
+	/bin/rm -rf obj/
+	make -C libft/ clean
 
 fclean: clean
-	rm -f $(NAME)
-	make fclean -C libft/
+	/bin/rm -f $(NAME)
+	make -C libft/ fclean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+all: $(NAME)
+.PHONY: clean fclean re all test

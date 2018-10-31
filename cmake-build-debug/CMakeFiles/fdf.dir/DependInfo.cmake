@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/fdf.c.o"
+  "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf_line.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/fdf_line.c.o"
+  "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/init_mlx.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/init_mlx.c.o"
   "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/ft_adders.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/ft_adders.c.o"
   "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/ft_additional.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/ft_additional.c.o"
   "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/ft_arrdel.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/ft_arrdel.c.o"
@@ -105,6 +107,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/ft_x_minus.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/ft_x_minus.c.o"
   "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/ft_xformat.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/ft_xformat.c.o"
   "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/get_next_line.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/libft/get_next_line.c.o"
+  "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/map_fdf.c" "/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/cmake-build-debug/CMakeFiles/fdf.dir/map_fdf.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

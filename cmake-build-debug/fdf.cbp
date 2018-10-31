@@ -86,6 +86,12 @@
 		<Unit filename="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf.h">
 			<Option target="fdf"/>
 		</Unit>
+		<Unit filename="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/fdf_line.c">
+			<Option target="fdf"/>
+		</Unit>
+		<Unit filename="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/init_mlx.c">
+			<Option target="fdf"/>
+		</Unit>
 		<Unit filename="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/ft_adders.c">
 			<Option target="fdf"/>
 		</Unit>
@@ -387,6 +393,9 @@
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/libft/libft.h">
+			<Option target="fdf"/>
+		</Unit>
+		<Unit filename="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/map_fdf.c">
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/ozalisky/Google Drive/UNIT FACTORY/PUSH/fdf/CMakeLists.txt">
